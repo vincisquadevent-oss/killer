@@ -1,0 +1,7 @@
+{
+  "name": "Killer Party",
+  "description": "A professional social game management app for organizing 'Killer' parties with automated target assignment, secret missions, and real-time tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
