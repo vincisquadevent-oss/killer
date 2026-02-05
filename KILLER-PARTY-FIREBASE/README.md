@@ -1,6 +1,6 @@
 # 🔥 Killer Party - Firebase Edition
 
-## Multi-joueurs en temps réel 
+## Multi-joueurs en temps réel  
 
 Version avec **Firebase Realtime Database** pour une vraie expérience multi-joueurs où chaque joueur utilise son propre appareil.
 
