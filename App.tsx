@@ -93,6 +93,16 @@ export default function App() {
   const [isProcessingAI, setIsProcessingAI] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Lire le code de partie depuis l'URL au chargement
+useEffect(() => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const joinCode = urlParams.get('join');
+  
+  if (joinCode && !user && !game) {
+    setJoinMode('join');
+    setPinCode(joinCode);
+  }
+}, []);
 
   const currentPlayer = useMemo(() => game?.players.find(p => p.id === user?.id) || user, [game?.players, user]);
   const currentTarget = useMemo(() => game?.players.find(p => p.id === currentPlayer?.targetId) || null, [game, currentPlayer]);
